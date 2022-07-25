@@ -1,0 +1,4 @@
+In one sentance, we have to find each word in how many occurance. As per requirement, 
+We have to return word which has more than 2 occurance.
+
+

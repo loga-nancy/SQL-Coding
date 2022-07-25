@@ -1,0 +1,41 @@
+class FilterLetter:
+    
+    def __init__(self,s):
+        self.s = s
+        
+    
+    
+    def filer_vowels(self):
+        vow = []
+        for letter in self.s:
+            if self.vowels(letter):
+                vow.append(letter)
+        
+        filter_keyword = ''.join(vow)
+        return filter_keyword
+                
+    
+    
+    def filter_constants(self):
+        cons = []
+        for letter in self.s:
+            if not self.vowels(letter):
+                cons.append(letter)
+        
+        filter_keyword = ''.join(cons)
+        return filter_keyword
+                    
+    
+    def vowels(self,letter):
+        vowels = ['a','e','i','o','u']
+        if letter in vowels:
+            return True
+        else:
+            return False
+    
+
+
+if __name__ == '__main__':
+    filerletter = FilterLetter('Logarajeshwaran')
+    print(filerletter.filer_vowels())
+    print(filerletter.filter_constants())
